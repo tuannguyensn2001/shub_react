@@ -1,0 +1,12 @@
+.header {
+  @apply tw-h-[64px] tw-bg-white tw-text-black tw-shadow;
+  border-bottom: 1px solid #D8DCF0;
+}
+
+.main_item {
+  @apply tw-px-5 tw-flex tw-flex-col tw-justify-center tw-cursor-pointer tw-h-full;
+}
+
+.main_item_active {
+  @apply tw-text-blue-500 tw-font-bold;
+}
