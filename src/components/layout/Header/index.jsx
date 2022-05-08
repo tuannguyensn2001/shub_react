@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './style.module.scss';
-import { Avatar } from '@chakra-ui/react';
-import { Link, useLocation } from 'react-router-dom';
+import {Avatar} from '@chakra-ui/react';
+import {Link, useLocation} from 'react-router-dom';
 
 const style = classNames.bind(styles);
 
@@ -25,7 +25,7 @@ const menu = [
 ];
 
 function Header() {
-    const { pathname } = useLocation();
+    const {pathname} = useLocation();
 
     return (
         <div className={style('header')}>
@@ -48,7 +48,7 @@ function Header() {
                                     to={item.link}
                                     className={style('main_item', {
                                         main_item_active:
-                                            pathname === item.link,
+                                            pathname.includes(item.link),
                                     })}
                                 >
                                     {item.label}

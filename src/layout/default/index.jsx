@@ -1,10 +1,14 @@
 import Header from '~/components/layout/Header';
+import styles from './style.module.scss';
+import classNames from "classnames/bind";
 
-function DefaultLayout({ children }) {
+const style = classNames.bind(styles);
+
+function DefaultLayout({children}) {
     return (
         <div>
-            <Header />
-            <div>{children}</div>
+            <Header/>
+            <div className={style('main')}>{children}</div>
         </div>
     );
 }
