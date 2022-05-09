@@ -1,0 +1,16 @@
+.main {
+  @apply tw-pt-5;
+  height: 93%;
+}
+
+.setting {
+  height: 7%;
+}
+
+.menu_item {
+  @apply hover:tw-bg-gray-100 tw-transition tw-duration-200 tw-cursor-pointer tw-px-5 tw-py-2 tw-rounded-3xl tw-mt-0.5;
+}
+
+.menu_active {
+  @apply tw-text-blue-700 hover:tw-text-blue-900 tw-bg-gray-100;
+}

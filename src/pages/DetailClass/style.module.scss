@@ -1,0 +1,4 @@
+.wrapper {
+  @apply tw-grid tw-grid-cols-8 tw-divide-x tw-h-full tw-divide-gray-300;
+  height: calc(100vh - 64px);
+}
