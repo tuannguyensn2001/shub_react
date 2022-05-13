@@ -5,6 +5,7 @@ const ClassPage = React.lazy(() => import('../pages/Class/index'));
 const ClassAddPage = React.lazy(() => import('../pages/ClassAdd/index'));
 const DetailClassPage = React.lazy(() => import('../pages/DetailClass/index'));
 const DetailClassNewsfeedPage = React.lazy(() => import('../pages/DetailClassNewsfeed/index'))
+const LoginPage = React.lazy(() => import('../pages/Login/index'))
 
 const routes = [
     {path: '/', element: HomePage},
@@ -25,6 +26,10 @@ const routes = [
                 element: DetailClassNewsfeedPage
             }
         ]
+    },
+    {
+        path: '/login',
+        element: LoginPage
     }
 ];
 

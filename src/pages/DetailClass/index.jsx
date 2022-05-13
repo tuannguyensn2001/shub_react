@@ -12,7 +12,9 @@ function DetailClass() {
                 <div className={'tw-col-span-1'}>
                     <Sidebar/>
                 </div>
-                <div className="tw-col-span-7"></div>
+                <div className="tw-col-span-7">
+                    <Outlet/>
+                </div>
             </div>
         </div>
     )
