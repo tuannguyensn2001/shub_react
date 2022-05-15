@@ -2,17 +2,34 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ChakraProvider, createStandaloneToast } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import './styles/global.scss';
+import { QueryClientProvider, QueryClient } from 'react-query';
+import { createStandaloneToast } from '@chakra-ui/toast';
 
-const { ToastContainer } = createStandaloneToast();
+const { ToastContainer, toast } = createStandaloneToast({
+    defaultOptions: {
+        position: 'top',
+    },
+});
+
+const client = new QueryClient({
+    defaultOptions: {
+        queries: {
+            refetchOnWindowFocus: false,
+        },
+    },
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <ChakraProvider>
-            <App />
-        </ChakraProvider>
+        <QueryClientProvider client={client}>
+            <ChakraProvider>
+                <ToastContainer />
+                <App />
+            </ChakraProvider>
+        </QueryClientProvider>
     </React.StrictMode>
 );
 
